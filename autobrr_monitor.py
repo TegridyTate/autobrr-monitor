@@ -260,10 +260,10 @@ def process_torrents(qb: Client, max_size_bytes: int) -> List[Dict[str, Union[st
                 'status': torrent.state
             }
 
-            if remaining_seed_time > 0 and not torrent.state == 'stoppedUP' and not torrent.state == 'stalledUP':
+            if remaining_seed_time > 0 and not torrent.state == 'stoppedUP':
                 remaining_seed_time_torrents.append(torrent_data)
                 logging.debug(f"Keeping torrent {torrent_data['name']} as it has remaining seed time of {torrent.eta}")
-            elif torrent.state == 'stoppedUP' or torrent.state == 'stalledUP':
+            elif torrent.state == 'stoppedUP':
                 completed_torrents.append(torrent_data)
                 logging.debug(f"Scheduled torrent force seeding: {torrent_data['name']} as it has no remaining seed time and/or is set to 'Completed'")
             else:
