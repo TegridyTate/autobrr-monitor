@@ -266,6 +266,8 @@ def process_torrents(qb: Client, max_size_bytes: int) -> List[Dict[str, Union[st
             elif torrent.state == 'stoppedUP' or torrent.state == 'stalledUP':
                 completed_torrents.append(torrent_data)
                 logging.debug(f"Scheduled torrent force seeding: {torrent_data['name']} as it has no remaining seed time and/or is set to 'Completed'")
+            else:
+                logging.debug(f"Not sure what to do with this torrent: {torrent_data['name']} with remaining seed time {torrent.eta} and status {torrent.state}")
 
             used_space += torrent.size
 
