@@ -10,8 +10,8 @@ There are several important paramters to set when you use autobrr-monitor's dock
 Setup Variables (To connect to qBittorrent, autobrr, and prometheus):
 * `QBITTORRENT_HOST`: Set this to your qBittorrent server's IP
 * `QBITTORRENT_PORT`: Set this to your qBittorrent's port (usually `8080`)
-* `QBITTORRENT_USERNAME`: Self explanitory
-* `QBITTORRENT_PASSWORD`: Self explanitory
+* `QBITTORRENT_USERNAME`: Self explanatory
+* `QBITTORRENT_PASSWORD`: Self explanatory
 * `PROMETHEUS_HOST`: Set this to your Prometheus server's IP
 * `PROMETHEUS_PORT`: Set this to your Prometheus's port (usually `9090`)
 * `AUTOBRR_HOST`: Set this to your autobrr server's IP
