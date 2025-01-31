@@ -300,7 +300,7 @@ def main():
 
     # Check global upload speed and toggle Autobrr
     avg_global_upload = calculate_average_upload_speed(
-        "qbittorrent_torrent_upload_speed_bytes",
+        "qbittorrent_global_upload_speed_bytes",
         GLOBAL_TIME_HORIZON_SECONDS
     )
 
