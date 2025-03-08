@@ -47,3 +47,4 @@ Diagram:
 * prometheus: https://hub.docker.com/r/prom/prometheus/
 
 qBittorrent's Web API doesn't provide historical upload/download data. qbittorrent-exporter collects data about your qbittorrent instance, such as upload/download globally and on a torrent level. Prometheus is a service monitoring system, which you can configure to connect to qbittorrent-exporter, so that you can query historical qBittorrent data, collected by qbittorrent-exporter, using prometheus. Grafana is optional, and allows you to create a dashboard that allows you to view all of the information from qbittorrent-exporter.
+
